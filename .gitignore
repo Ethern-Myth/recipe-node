@@ -1,3 +1,4 @@
 .env
+.node-version
 /node_modules
 /uploads/*[.jpg, .jpeg, .png, .gif]
