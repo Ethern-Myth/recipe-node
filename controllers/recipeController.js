@@ -33,14 +33,12 @@ const recipe = {
 
 	add: async (req, res) => {
 		try {
-			const form = req.body;
-			const image = req.file.path;
-			const data = { ...form, image };
+			const data = req.body;
 			const schema = Joi.object({
 				description: Joi.string().min(1).required(),
 				ingredients: Joi.array().required(),
 				instructions: Joi.string().required(),
-				image: Joi.string().allow(""),
+				image: Joi.allow(""),
 				link: Joi.string().allow(""),
 				userId: Joi.string().required(),
 			});

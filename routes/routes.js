@@ -18,9 +18,9 @@ router.get("/recipe", recipe.recipes);
 
 router.get("/recipe/:id", recipe.recipe);
 
-router.post("/recipe", ensureToken, recipe.uploadImage, recipe.add);
+router.post("/recipe", ensureToken, recipe.add);
 
-router.put("/recipe/:id", ensureToken, recipe.uploadImage, recipe.update);
+router.put("/recipe/:id", ensureToken, recipe.update);
 
 router.put(
 	"/recipe/upload/:id",
